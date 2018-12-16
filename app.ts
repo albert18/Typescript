@@ -54,7 +54,7 @@ console.log(myColor);
 
 ///////////////////
 //Next Round// 
-//note: 
+//note: some changes
 ///////////////////
 
 ///////////////////
