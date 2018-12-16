@@ -62,28 +62,39 @@ car = { brand: "BMW", series: 3 };
 function returnMyName() {
     return myName;
 }
-console.log(myName);
+// console.log(myName);
 //void
 function sayHello() {
-    console.log("Hello");
+    // console.log("Hello");
 }
 //arguments types
 function multiply(value1, value2) {
     return value1 * value2;
 }
-console.log(multiply(10, 10));
+// console.log(multiply(10, 10));
 ///////////////////
 ///////////////////
-//Assigning Type// 
+//Assigning Types// 
 //note: 
+var myMultiply;
+myMultiply = sayHello;
+myMultiply();
+myMultiply = multiply;
+// console.log(myMultiply(5,2));
 ///////////////////
 ///////////////////
-//Assigning Type// 
+//Objects and Type// 
 //note: 
-///////////////////
-///////////////////
-//Assigning Type// 
-//note: 
+var userData = {
+    name: "Max",
+    age: 27
+};
+var complex2 = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
 ///////////////////
 ///////////////////
 //Assigning Type// 

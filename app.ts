@@ -69,33 +69,53 @@ car = { brand: "BMW", series: 3};
 function returnMyName () : string {
     return myName
 }
-console.log(myName);
+// console.log(myName);
 
 //void
 function sayHello() : void {
-    console.log("Hello");
+    // console.log("Hello");
 }
 
 //arguments types
 function multiply(value1: number, value2: number) {
     return value1 * value2;
 }
-console.log(multiply(10, 10));
+// console.log(multiply(10, 10));
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
+//Assigning Types// 
 //note: 
+let myMultiply;
+myMultiply = sayHello;
+myMultiply();
+myMultiply = multiply;
+// console.log(myMultiply(5,2));
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
+//Objects and Type// 
 //note: 
+let userData: { name: string, age: number} = {
+    name: "Max",
+    age: 27
+};
+// console.log(userData.name + ' ' + userData.age)
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
+//Complex Creating Custom Types with type alias// 
 //note: 
+type Complex = {data: number[], output: (all: boolean) => number[]};
+
+let complex2: Complex = {
+    data: [100, 3.99, 10],
+
+    output: function(all: boolean): number[] {
+        return this.data
+    }
+}
+
 ///////////////////
 
 ///////////////////
