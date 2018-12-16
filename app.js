@@ -41,15 +41,19 @@ var address = ["Super Street", 99];
 var Color;
 (function (Color) {
     Color[Color["Gray"] = 0] = "Gray";
-    Color[Color["Green"] = 200] = "Green";
-    Color[Color["Blue"] = 201] = "Blue";
+    Color[Color["Green"] = 100] = "Green";
+    Color[Color["Blue"] = 101] = "Blue";
 })(Color || (Color = {}));
 var myColor = Color.Green;
-console.log(myColor);
+// console.log(myColor);
 ///////////////////
 ///////////////////
-//Next Round// 
+//Any Types// 
 //note: some changes
+var car = "bmw";
+console.log(car);
+car = { brand: "BMW", series: 3 };
+console.log(car);
 ///////////////////
 ///////////////////
 //Assigning Type// 

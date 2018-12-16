@@ -45,16 +45,20 @@ let address: [string, number] = ["Super Street", 99];
 //note: You can assign value, for ex. add 100 to Green and value will be 100
 enum Color {
     Gray,
-    Green = 200,
+    Green = 100,
     Blue
 }
 let myColor: Color = Color.Green
-console.log(myColor);
+// console.log(myColor);
 ///////////////////
 
 ///////////////////
-//Next Round// 
+//Any Types// 
 //note: some changes
+let car : any = "bmw";
+console.log(car);
+car = { brand: "BMW", series: 3};
+console.log(car);
 ///////////////////
 
 ///////////////////
