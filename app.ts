@@ -45,7 +45,7 @@ let address: [string, number] = ["Super Street", 99];
 //note: You can assign value, for ex. add 100 to Green and value will be 100
 enum Color {
     Gray,
-    Green = 100,
+    Green = 200,
     Blue
 }
 let myColor: Color = Color.Green
