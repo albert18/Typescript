@@ -51,9 +51,43 @@ var myColor = Color.Green;
 //Any Types// 
 //note: some changes
 var car = "bmw";
-console.log(car);
+// console.log(car);
 car = { brand: "BMW", series: 3 };
-console.log(car);
+// console.log(car);
+///////////////////
+///////////////////
+//Types of Function// 
+//note: 
+//functions
+function returnMyName() {
+    return myName;
+}
+console.log(myName);
+//void
+function sayHello() {
+    console.log("Hello");
+}
+//arguments types
+function multiply(value1, value2) {
+    return value1 * value2;
+}
+console.log(multiply(10, 10));
+///////////////////
+///////////////////
+//Assigning Type// 
+//note: 
+///////////////////
+///////////////////
+//Assigning Type// 
+//note: 
+///////////////////
+///////////////////
+//Assigning Type// 
+//note: 
+///////////////////
+///////////////////
+//Assigning Type// 
+//note: 
 ///////////////////
 ///////////////////
 //Assigning Type// 
