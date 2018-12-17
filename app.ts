@@ -115,7 +115,24 @@ let complex2: Complex = {
         return this.data
     }
 }
+///////////////////
 
+///////////////////
+//Union Types// 
+//note: number or string only -- NOT BOOLEAN can't not assign
+let myRealRealAge: number | string = 27;
+myRealRealAge = "27";
+
+///////////////////
+
+///////////////////
+//Assigning Type// 
+//note: 
+///////////////////
+
+///////////////////
+//Assigning Type// 
+//note: 
 ///////////////////
 
 ///////////////////
