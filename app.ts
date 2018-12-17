@@ -127,10 +127,75 @@ myRealRealAge = "27";
 ///////////////////
 //Check types// 
 //note: 
-let finaValue = 30;
-if (typeof finaValue == "number")
-    console.log("Final value is a number!")
+// let finaValue = 30;
+// if (typeof finaValue == "number")
+// {
+//      console.log("Final value is a number!")
+// }
+    
 
+///////////////////
+
+///////////////////
+//Never// 
+//note: Never return 
+// function neverReturns(): never {
+//     throw new Error('An Error!');
+// }
+///////////////////
+
+///////////////////
+//Null Type// 
+//note: 
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
+///////////////////
+
+////////////////////////////////////////////////////////////////////////////
+// Section 2 Excercise
+type BankAccount = {money: number, deposit: (val: number) => void};
+
+let bankAccount: BankAccount =  {
+    money: 2000,
+    deposit(value: number): void {
+        this.money += value;
+    }
+};
+
+let myself: { name: string, bankAccount: BankAccount, hobbies: string[]} = {
+    name: "Max",
+    bankAccount: bankAccount,
+    hobbies: ["Sports", "Cooking"]
+};
+
+myself.bankAccount.deposit(3000);
+console.log(myself);
+
+
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+// Section 3
+
+///////////////////
+//Assigning Type// 
+//note: 
+///////////////////
+
+///////////////////
+//Assigning Type// 
+//note: 
 ///////////////////
 
 ///////////////////
