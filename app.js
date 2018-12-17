@@ -98,13 +98,16 @@ var complex2 = {
 ///////////////////
 ///////////////////
 //Union Types// 
-//note: 
+//note: number or string only -- NOT BOOLEAN can't not assign
 var myRealRealAge = 27;
 myRealRealAge = "27";
 ///////////////////
 ///////////////////
-//Assigning Type// 
+//Check types// 
 //note: 
+var finaValue = 30;
+if (typeof finaValue == "number")
+    console.log("Final value is a number!");
 ///////////////////
 ///////////////////
 //Assigning Type// 
