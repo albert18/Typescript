@@ -231,7 +231,51 @@ myself.bankAccount.deposit(3000);
 ////////////////////////////////////////////////////////////////////////////
 
 ///////////////////
-//Assigning Type// 
+//"Let" and "Const"// 
+//note: const can't not be assign coz its read only
+let variable = "Test";
+// console.log(variable);
+variable = "Another Value";
+// console.log(variable);
+
+const maxLevels = 100
+// console.log(maxLevels);
+///////////////////
+
+///////////////////
+//Block Scope// 
+//note: use the let inside only that function
+function reset() {
+    let variable = null;
+    // console.log(variable);
+}
+reset()
+// console.log(variable);
+///////////////////
+
+///////////////////
+//Arrow Functions// 
+//note: 
+const addNumbers = function(number1: number, number2: number): number {
+    return number1 + number2;
+}
+// console.log(addNumbers(10, 3));
+// OR the easy way
+const multiplyByNumbers = (number1: number, number2: number) => number1 * number2;
+// console.log(multiplyByNumbers(10, 3));
+///////////////////
+
+///////////////////
+//Arrow Functions - Varitions// 
+//note: function that don't need arguments
+const greet = () => {
+    // console.log("Hello");
+}
+greet();
+///////////////////
+
+///////////////////
+//FUnctions and Default Parameters// 
 //note: 
 ///////////////////
 
@@ -239,7 +283,6 @@ myself.bankAccount.deposit(3000);
 //Assigning Type// 
 //note: 
 ///////////////////
-
 
 ///////////////////
 //Assigning Type// 

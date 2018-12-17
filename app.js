@@ -158,7 +158,7 @@ myself.bankAccount.deposit(3000);
 ///////////////////
 ///////////////////
 //Avoiding implicity "Any"// 
-//note: 
+//note: noImplicitAny in  tsconfig.json -- Prefer to be false
 ///////////////////
 ///////////////////
 //More Compilers// 
@@ -166,7 +166,7 @@ myself.bankAccount.deposit(3000);
 ///////////////////
 ///////////////////
 //Compiler improvement with typescript 2.0// 
-//note: 
+//note: strictNullChecks
 ///////////////////
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
@@ -174,20 +174,43 @@ myself.bankAccount.deposit(3000);
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////
-//Assigning Type// 
+//"Let" and "Const"// 
+//note: const can't not be assign coz its read only
+var variable = "Test";
+// console.log(variable);
+variable = "Another Value";
+// console.log(variable);
+var maxLevels = 100;
+// console.log(maxLevels);
+///////////////////
+///////////////////
+//Block Scope// 
+//note: use the let inside only that function
+function reset() {
+    var variable = null;
+    // console.log(variable);
+}
+reset();
+// console.log(variable);
+///////////////////
+///////////////////
+//Arrow Functions// 
 //note: 
+var addNumbers = function (number1, number2) {
+    return number1 + number2;
+};
+// console.log(addNumbers(10, 3));
+// OR the easy way
+var multiplyByNumbers = function (number1, number2) { return number1 * number2; };
+// console.log(multiplyByNumbers(10, 3));
 ///////////////////
 ///////////////////
-//Assigning Type// 
-//note: 
-///////////////////
-///////////////////
-//Assigning Type// 
-//note: 
-///////////////////
-///////////////////
-//Assigning Type// 
-//note: 
+//Arrow Functions - Varitions// 
+//note: function that don't need arguments
+var greet = function () {
+    // console.log("Hello");
+};
+greet();
 ///////////////////
 ///////////////////
 //Assigning Type// 
