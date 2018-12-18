@@ -277,20 +277,28 @@ greet();
 ///////////////////
 //FUnctions and Default Parameters// 
 //note: 
+const countdown = (start: number = 10): void => {
+    console.log(start);
+    while(start > 0) {
+        start--;
+    }
+    // console.log("Done", start)
+}
+countdown();
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
+//Spread Operator// 
 //note: 
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
+//The REST operator// 
 //note: 
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
+//Rest Parameter & tupies// 
 //note: 
 ///////////////////
 

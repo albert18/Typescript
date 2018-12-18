@@ -213,6 +213,31 @@ var greet = function () {
 greet();
 ///////////////////
 ///////////////////
+//FUnctions and Default Parameters// 
+//note: 
+var countdown = function (start) {
+    if (start === void 0) { start = 10; }
+    console.log(start);
+    while (start > 0) {
+        start--;
+    }
+    console.log("Done", start);
+};
+countdown();
+///////////////////
+///////////////////
+//Spread Operator// 
+//note: 
+///////////////////
+///////////////////
+//Assigning Type// 
+//note: 
+///////////////////
+///////////////////
+//Assigning Type// 
+//note: 
+///////////////////
+///////////////////
 //Assigning Type// 
 //note: 
 ///////////////////
