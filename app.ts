@@ -1,3 +1,4 @@
+"use strict";
 // console.log("test 123");
 ///////////////////
 //Assigning Type// 
@@ -374,6 +375,7 @@ greetE("Anna");
 
 // Excercise 3
 const exerciseNumber = [-2, 33, 38, 5];
+
 // console.log(Math.min(...exerciseNumber));
 
 // Excercise 4
@@ -382,16 +384,125 @@ newArrayEx.push(...exerciseNumber);
 // console.log(newArrayEx)
 
 // Excercise 5
-const testResults = [3.89, 2.99, 1.38];
-const [result1, result2, result3] = testResults;
-console.log(result1, result2, result3);
+// const testResults = [3.89, 2.99, 1.38];
+// const [result1, result2, result3] = testResults;
+// console.log(result1, result2, result3);
 // or
 // console.log([result1, result2, result3]);
 
 
 // Excercise 6
-const scientist = {firstName: "Will", experience: 12};
-const {firstName: firstObjet, experience: secondObject} = scientist;
-console.log(firstObjet, secondObject);
+// const scientist = {firstName: "Will", experience: 12};
+// const {firstName: firstObjet, experience: secondObject} = scientist;
+// console.log(firstObjet, secondObject);
 
+///////////////////
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+// Section 5 Using Classes to Create Objects
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////
+// Creating Class and Class Properties. Class Methods and access modifiers
+//note:
+class Person {
+    nameClass: string;
+    private type: string;
+    protected age: number = 32;
+
+    constructor(nameC: string, public username: string) {
+        this.nameClass = nameC;
+    }
+
+    // setting up a method
+    printAge() {
+        console.log(this.age)
+    }
+
+    setType(type: string) {
+        this.type = type;
+        console.log(this.type)
+    }
+
+    // or
+
+    // // setting up a method
+    // printAge() {
+    //     console.log(this.age)
+    //     this.setType("Young guy")
+    // }
+
+    // private setType(type: string) {
+    //     this.type = type;
+    //     console.log(this.type)
+    // }
+}
+
+const iPerson = new Person("Albert", "al");
+console.log(iPerson);
+iPerson.printAge();
+iPerson.setType("Cool");
+
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
 ///////////////////

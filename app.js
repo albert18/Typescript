@@ -301,14 +301,44 @@ var exerciseNumber = [-2, 33, 38, 5];
 // console.log(Math.min(...exerciseNumber));
 // Excercise 4
 var newArrayEx = [15, 20];
-Array.prototype.push.apply(newArrayEx, exerciseNumber);
-console.log(newArrayEx);
+newArrayEx.push.apply(newArrayEx, exerciseNumber);
+// console.log(newArrayEx)
 // Excercise 5
-var testResults = [3.89, 2.99, 1.38];
-var result1 = testResults[0], result2 = testResults[1], result3 = testResults[2];
-console.log(result1, result2, result3);
+// const testResults = [3.89, 2.99, 1.38];
+// const [result1, result2, result3] = testResults;
+// console.log(result1, result2, result3);
+// or
+// console.log([result1, result2, result3]);
 // Excercise 6
-var scientist = { firstName: "Will", experience: 12 };
-var firstObjet = scientist.firstName, secondObject = scientist.experience;
-console.log(firstObjet, secondObject);
+// const scientist = {firstName: "Will", experience: 12};
+// const {firstName: firstObjet, experience: secondObject} = scientist;
+// console.log(firstObjet, secondObject);
 ///////////////////
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+// Section 5 Using Classes to Create Objects
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+///////////////////
+// Creating Class and Class Properties
+//note:
+var Person = /** @class */ (function () {
+    function Person(nameC, username) {
+        this.username = username;
+        this.age = 32;
+        this.nameClass = nameC;
+    }
+    // setting up a method
+    Person.prototype.printAge = function () {
+        console.log(this.age);
+    };
+    Person.prototype.setType = function (type) {
+        this.type = type;
+        console.log(this.type);
+    };
+    return Person;
+}());
+var iPerson = new Person("Albert", "al");
+console.log(iPerson);
+iPerson.printAge();
+iPerson.setType("Cool");
