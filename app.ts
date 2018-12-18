@@ -260,6 +260,7 @@ const addNumbers = function(number1: number, number2: number): number {
     return number1 + number2;
 }
 // console.log(addNumbers(10, 3));
+
 // OR the easy way
 const multiplyByNumbers = (number1: number, number2: number) => number1 * number2;
 // console.log(multiplyByNumbers(10, 3));
@@ -282,7 +283,7 @@ const countdown = (start: number = 10): void => {
     while(start > 0) {
         start--;
     }
-    // console.log("Done", start)
+    //  console.log("Done", start)
 }
 countdown();
 ///////////////////
@@ -317,21 +318,80 @@ function makeArray(...args: number[]) {
 ///////////////////
 
 ///////////////////
-//Desctrucuting arrays// 
-//note: 
+//Desctructuing arrays// 
+//note: Use [] 
+const myHobbies = ["Cooking", "Sports"];
+const [hobby1, hobby2] = myHobbies;
+// console.log(hobby1, hobby2)
+
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
+//Desctructuing Object// 
 //note: 
+// const userDataObject = {userName: "max", age: 27}
+// const {userName, age} = userDataObject
+// console.log(userName, age);
+
+// OR you can use Alias
+
+const userDataObject = {userName: "max", age: 27}
+const {userName: myNameObject, age: myAgeObject} = userDataObject
+// console.log(myNameObject, myAgeObject);
+
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
-//note: 
+//Template Literals// 
+//note: using backtick you be able like template literals
+const userNameTemplate = "Max";
+const greeting = `This is a header!
+I'm ${userNameTemplate}.
+This is so cool` 
+// console.log(greeting);
+
 ///////////////////
 
 ///////////////////
-//Assigning Type// 
+//Module 4 Exercise// 
 //note: 
+
+// Excercise 1
+const double = function(value: number): number {
+    return value * 2;
+}
+// console.log(double(10));
+
+const double1 = (value: number) => value * 2
+// console.log(double1(30));
+
+// Excercise 2
+const greetE = (nameE = "Max") => {
+    // console.log("Hello " + nameE);
+};
+greetE();
+greetE("Anna");
+
+// Excercise 3
+const exerciseNumber = [-2, 33, 38, 5];
+// console.log(Math.min(...exerciseNumber));
+
+// Excercise 4
+const  newArrayEx = [15,20];
+newArrayEx.push(...exerciseNumber);
+// console.log(newArrayEx)
+
+// Excercise 5
+const testResults = [3.89, 2.99, 1.38];
+const [result1, result2, result3] = testResults;
+console.log(result1, result2, result3);
+// or
+// console.log([result1, result2, result3]);
+
+
+// Excercise 6
+const scientist = {firstName: "Will", experience: 12};
+const {firstName: firstObjet, experience: secondObject} = scientist;
+console.log(firstObjet, secondObject);
+
 ///////////////////

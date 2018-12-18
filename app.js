@@ -221,7 +221,7 @@ var countdown = function (start) {
     while (start > 0) {
         start--;
     }
-    // console.log("Done", start)
+    //  console.log("Done", start)
 };
 countdown();
 ///////////////////
@@ -255,18 +255,60 @@ function makeArray() {
 // }
 ///////////////////
 ///////////////////
-//Desctrucuting arrays// 
+//Desctructuing arrays// 
+//note: Use [] 
+var myHobbies = ["Cooking", "Sports"];
+var hobby1 = myHobbies[0], hobby2 = myHobbies[1];
+// console.log(hobby1, hobby2)
+///////////////////
+///////////////////
+//Desctructuing Object// 
 //note: 
+// const userDataObject = {userName: "max", age: 27}
+// const {userName, age} = userDataObject
+// console.log(userName, age);
+// OR you can use Alias
+var userDataObject = { userName: "max", age: 27 };
+var myNameObject = userDataObject.userName, myAgeObject = userDataObject.age;
+// console.log(myNameObject, myAgeObject);
 ///////////////////
 ///////////////////
-//Assigning Type// 
+//Template Literals// 
+//note: using backtick you be able like template literals
+var userNameTemplate = "Max";
+var greeting = "This is a header!\nI'm " + userNameTemplate + ".\nThis is so cool";
+// console.log(greeting);
+///////////////////
+///////////////////
+//Module 4 Exercise// 
 //note: 
-///////////////////
-///////////////////
-//Assigning Type// 
-//note: 
-///////////////////
-///////////////////
-//Assigning Type// 
-//note: 
+// Excercise 1
+var double = function (value) {
+    return value * 2;
+};
+// console.log(double(10));
+var double1 = function (value) { return value * 2; };
+// console.log(double1(30));
+// Excercise 2
+var greetE = function (nameE) {
+    if (nameE === void 0) { nameE = "Max"; }
+    // console.log("Hello " + nameE);
+};
+greetE();
+greetE("Anna");
+// Excercise 3
+var exerciseNumber = [-2, 33, 38, 5];
+// console.log(Math.min(...exerciseNumber));
+// Excercise 4
+var newArrayEx = [15, 20];
+Array.prototype.push.apply(newArrayEx, exerciseNumber);
+console.log(newArrayEx);
+// Excercise 5
+var testResults = [3.89, 2.99, 1.38];
+var result1 = testResults[0], result2 = testResults[1], result3 = testResults[2];
+console.log(result1, result2, result3);
+// Excercise 6
+var scientist = { firstName: "Will", experience: 12 };
+var firstObjet = scientist.firstName, secondObject = scientist.experience;
+console.log(firstObjet, secondObject);
 ///////////////////
