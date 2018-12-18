@@ -175,7 +175,7 @@ myself.bankAccount.deposit(3000);
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////
 //"Let" and "Const"// 
-//note: const can't not be assign coz its read only
+//note: const can't not be assign if it was assigned already. coz its read only!
 var variable = "Test";
 // console.log(variable);
 variable = "Another Value";
@@ -217,20 +217,45 @@ greet();
 //note: 
 var countdown = function (start) {
     if (start === void 0) { start = 10; }
-    console.log(start);
+    // console.log(start);
     while (start > 0) {
         start--;
     }
-    console.log("Done", start);
+    // console.log("Done", start)
 };
 countdown();
 ///////////////////
 ///////////////////
 //Spread Operator// 
+//note: use 3 dots to spread arrays to a single value -- To check that has the highest value 
+var numbersSpread = [1, 10, 99, -5];
+// console.log(Math.max(33,99,10,-3));
+// console.log(Math.max(...numbersSpread));
+///////////////////
+///////////////////
+//The REST operator// 
 //note: 
+function makeArray() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    return args;
+}
+// console.log(1,2,3);
 ///////////////////
 ///////////////////
-//Assigning Type// 
+//Rest Parameter & tupies// 
+//note: 
+// function printInfo(name: string, age: number) {
+//     console.log('My name is ' + name + ' and I am ' + age + ' years old!');
+// }
+// function printInfo(...info: [string, number]) {
+//     console.log('My name is ' + info[0] + ' and I am ' + info[1] + ' years old!');
+// }
+///////////////////
+///////////////////
+//Desctrucuting arrays// 
 //note: 
 ///////////////////
 ///////////////////

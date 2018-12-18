@@ -232,7 +232,7 @@ myself.bankAccount.deposit(3000);
 
 ///////////////////
 //"Let" and "Const"// 
-//note: const can't not be assign coz its read only
+//note: const can't not be assign if it was assigned already. coz its read only!
 let variable = "Test";
 // console.log(variable);
 variable = "Another Value";
@@ -278,7 +278,7 @@ greet();
 //FUnctions and Default Parameters// 
 //note: 
 const countdown = (start: number = 10): void => {
-    console.log(start);
+    // console.log(start);
     while(start > 0) {
         start--;
     }
@@ -289,16 +289,40 @@ countdown();
 
 ///////////////////
 //Spread Operator// 
-//note: 
+//note: use 3 dots to spread arrays to a single value -- To check that has the highest value 
+const numbersSpread = [1, 10, 99, -5]
+// console.log(Math.max(33,99,10,-3));
+// console.log(Math.max(...numbersSpread));
 ///////////////////
 
 ///////////////////
 //The REST operator// 
 //note: 
+function makeArray(...args: number[]) {
+    return args;
+}
+// console.log(1,2,3);
 ///////////////////
 
 ///////////////////
 //Rest Parameter & tupies// 
+//note: 
+
+// function printInfo(name: string, age: number) {
+//     console.log('My name is ' + name + ' and I am ' + age + ' years old!');
+// }
+// function printInfo(...info: [string, number]) {
+//     console.log('My name is ' + info[0] + ' and I am ' + info[1] + ' years old!');
+// }
+///////////////////
+
+///////////////////
+//Desctrucuting arrays// 
+//note: 
+///////////////////
+
+///////////////////
+//Assigning Type// 
 //note: 
 ///////////////////
 
