@@ -491,15 +491,23 @@ class Plant {
     }
 
 }
-let plant = new Plant();
-console.log(plant.species);
-plant.species = "AB21312";
-console.log(plant.species);
+// let plant = new Plant();
+// console.log(plant.species);
+// plant.species = "AB21312";
+// console.log(plant.species);
 ///////////////////
 
 ///////////////////
-// 
+// Static Property & Methods
 //note:
+class Helpers {
+    static PI: number = 3.14;
+    static calCircumference(diameter: number): number {
+        return this.PI * diameter
+    }
+}
+console.log(2 * Helpers.PI)
+console.log(Helpers.calCircumference(8));
 ///////////////////
 
 ///////////////////

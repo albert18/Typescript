@@ -374,7 +374,7 @@ var max = new Max("max");
 ///////////////////
 ///////////////////
 // Getters and Setters
-//note: 
+//note: Control your properties
 var Plant = /** @class */ (function () {
     function Plant() {
         this._species = "Default";
@@ -396,7 +396,21 @@ var Plant = /** @class */ (function () {
     });
     return Plant;
 }());
-var plant = new Plant();
-console.log(plant.species);
-plant.species = "AB21312";
-console.log(plant.species);
+// let plant = new Plant();
+// console.log(plant.species);
+// plant.species = "AB21312";
+// console.log(plant.species);
+///////////////////
+///////////////////
+// Static Property & Methods
+//note:
+var Helpers = /** @class */ (function () {
+    function Helpers() {
+    }
+    Helpers.calCircumference = function (diameter) {
+        return this.PI * diameter;
+    };
+    Helpers.PI = 3.14;
+    return Helpers;
+}());
+console.log(2 * Helpers.PI);
