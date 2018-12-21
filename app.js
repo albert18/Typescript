@@ -413,4 +413,32 @@ var Helpers = /** @class */ (function () {
     Helpers.PI = 3.14;
     return Helpers;
 }());
-console.log(2 * Helpers.PI);
+// console.log(2 * Helpers.PI)
+// console.log(Helpers.calCircumference(8));
+///////////////////
+///////////////////
+//  Abstract Classes
+//note:
+var Project = /** @class */ (function () {
+    function Project() {
+        this.projectName = "Default";
+    }
+    Project.prototype.calcBudget = function () {
+        return this.budget * 2;
+    };
+    return Project;
+}());
+var ITProject = /** @class */ (function (_super) {
+    __extends(ITProject, _super);
+    function ITProject() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    ITProject.prototype.changeName = function (name) {
+        this.projectName = name;
+    };
+    return ITProject;
+}(Project));
+var newProject = new ITProject();
+console.log(newProject); // or
+newProject.changeName("Awesome");
+console.log(newProject);

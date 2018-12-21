@@ -506,13 +506,34 @@ class Helpers {
         return this.PI * diameter
     }
 }
-console.log(2 * Helpers.PI)
-console.log(Helpers.calCircumference(8));
+// console.log(2 * Helpers.PI)
+// console.log(Helpers.calCircumference(8));
 ///////////////////
 
 ///////////////////
-// 
-//note:
+//  Abstract Classes
+//note: Needs to be inherited provide a base class
+abstract class Project {
+    projectName: string = "Default"
+    budget: number;
+
+    abstract changeName(name: string): void;
+
+    calcBudget() {
+        return this.budget * 2;
+    }
+}
+
+class ITProject extends Project {
+    changeName(name: string): void {
+        this.projectName = name;
+    }
+}
+
+let newProject = new ITProject();
+console.log(newProject); // or
+newProject.changeName("Awesome")
+console.log(newProject);
 ///////////////////
 
 ///////////////////
