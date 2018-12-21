@@ -451,19 +451,29 @@ class Person {
 }
 
 const iPerson = new Person("Albert", "al");
-console.log(iPerson);
-iPerson.printAge();
-iPerson.setType("Cool");
+// console.log(iPerson);
 
+// iPerson.printAge();
+// iPerson.setType("Cool");
 ///////////////////
 
 ///////////////////
-// Inheritance
+// Inheritance and Contructor
 //note:
+class Max extends Person {
+    // name = "Max"
+
+    constructor(username: string) {
+        super("Max", username);
+        this.age = 31;
+    }
+}
+const max = new Max("max");
+// console.log(max);
 ///////////////////
 
 ///////////////////
-// 
+// Getters and Setters
 //note:
 ///////////////////
 

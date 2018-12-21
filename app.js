@@ -1,4 +1,17 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // console.log("test 123");
 ///////////////////
 //Assigning Type// 
@@ -320,7 +333,7 @@ newArrayEx.push.apply(newArrayEx, exerciseNumber);
 ////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////
-// Creating Class and Class Properties
+// Creating Class and Class Properties. Class Methods and access modifiers
 //note:
 var Person = /** @class */ (function () {
     function Person(nameC, username) {
@@ -340,5 +353,20 @@ var Person = /** @class */ (function () {
 }());
 var iPerson = new Person("Albert", "al");
 console.log(iPerson);
-iPerson.printAge();
-iPerson.setType("Cool");
+// iPerson.printAge();
+// iPerson.setType("Cool");
+///////////////////
+///////////////////
+// Inheritance and Contructor
+//note:
+var Max = /** @class */ (function (_super) {
+    __extends(Max, _super);
+    // name = "Max"
+    function Max(username) {
+        var _this = _super.call(this, "Max", username) || this;
+        _this.age = 31;
+        return _this;
+    }
+    return Max;
+}(Person));
+var max = new Max("max");
