@@ -352,7 +352,7 @@ var Person = /** @class */ (function () {
     return Person;
 }());
 var iPerson = new Person("Albert", "al");
-console.log(iPerson);
+// console.log(iPerson);
 // iPerson.printAge();
 // iPerson.setType("Cool");
 ///////////////////
@@ -370,3 +370,33 @@ var Max = /** @class */ (function (_super) {
     return Max;
 }(Person));
 var max = new Max("max");
+// console.log(max);
+///////////////////
+///////////////////
+// Getters and Setters
+//note: 
+var Plant = /** @class */ (function () {
+    function Plant() {
+        this._species = "Default";
+    }
+    Object.defineProperty(Plant.prototype, "species", {
+        get: function () {
+            return this._species;
+        },
+        set: function (value) {
+            if (value.length > 3) {
+                this._species = value;
+            }
+            else {
+                this._species = "Default";
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return Plant;
+}());
+var plant = new Plant();
+console.log(plant.species);
+plant.species = "AB21312";
+console.log(plant.species);

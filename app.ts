@@ -474,7 +474,27 @@ const max = new Max("max");
 
 ///////////////////
 // Getters and Setters
-//note:
+//note: Control your properties
+class Plant {
+    private _species: string =  "Default";
+
+    get species() {
+        return this._species;
+    }
+
+    set species(value: string) {
+        if (value.length > 3) {
+            this._species = value;
+        } else {
+            this._species = "Default";
+        }
+    }
+
+}
+let plant = new Plant();
+console.log(plant.species);
+plant.species = "AB21312";
+console.log(plant.species);
 ///////////////////
 
 ///////////////////
