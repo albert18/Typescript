@@ -530,15 +530,30 @@ class ITProject extends Project {
     }
 }
 
-let newProject = new ITProject();
-console.log(newProject); // or
-newProject.changeName("Awesome")
-console.log(newProject);
+// let newProject = new ITProject();
+// console.log(newProject); // or
+// newProject.changeName("Awesome")
+// console.log(newProject);
 ///////////////////
 
 ///////////////////
-// 
+// Private Contructor
 //note:
+class OnlyOne {
+    private static instance: OnlyOne;
+
+    public constructor(public name:string) {}
+
+    static getInstance() {
+        if(!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The only one');
+        }
+        return OnlyOne.instance;
+    }
+}
+let wrong = new OnlyOne('The only one');
+let right = OnlyOne.getInstance();
+
 ///////////////////
 
 ///////////////////

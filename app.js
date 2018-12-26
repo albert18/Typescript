@@ -418,7 +418,7 @@ var Helpers = /** @class */ (function () {
 ///////////////////
 ///////////////////
 //  Abstract Classes
-//note:
+//note: Needs to be inherited provide a base class
 var Project = /** @class */ (function () {
     function Project() {
         this.projectName = "Default";
@@ -438,7 +438,3 @@ var ITProject = /** @class */ (function (_super) {
     };
     return ITProject;
 }(Project));
-var newProject = new ITProject();
-console.log(newProject); // or
-newProject.changeName("Awesome");
-console.log(newProject);
