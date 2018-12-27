@@ -541,8 +541,11 @@ class ITProject extends Project {
 //note:
 class OnlyOne {
     private static instance: OnlyOne;
+    public name: string;
 
-    public constructor(public name:string) {}
+    public constructor(name:string) {
+        this.name = name;
+    }
 
     static getInstance() {
         if(!OnlyOne.instance) {
@@ -551,9 +554,134 @@ class OnlyOne {
         return OnlyOne.instance;
     }
 }
-let wrong = new OnlyOne('The only one');
+// let wrong = new OnlyOne('The only one'); //WRONG need be public 
 let right = OnlyOne.getInstance();
 
+///////////////////
+
+///////////////////
+// readonly properties
+//note: 2 ways to do it first in the getter/setter OR adding readonly
+right.name = 'Something else';
+///////////////////
+
+///////////////////
+// MODULE 5 Exercise
+//note:
+// Exercise 1 Class
+class Car {
+    name: string;
+    accelaration: number = 0;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    honk() {
+        console.log("Tooooooooot");
+    }
+    
+    accelerate(speed: number) {
+        this.accelaration = this.accelaration + speed;
+    }
+}
+//  const carModule5 = new Car("BMW");
+//  carModule5.honk();
+//  console.log(carModule5.accelaration);
+//  carModule5.accelerate(20);
+//  console.log(carModule5.accelaration);
+
+
+// Exercise 2
+class BaseObject {
+    width = 0;
+    length = 0;
+}
+
+class Rectangle extends BaseObject {
+    calcSize() {
+        return this.width * this.length;
+    }
+}
+
+// const rectangle = new Rectangle();
+// rectangle.width = 5;
+// rectangle.length = 10;
+// console.log(rectangle.calcSize());
+
+// Exercise 3 Getter & Setters
+class PersonExercise {
+    private _firstName: string = "";
+
+    get firstName () {
+        return this._firstName
+    }
+
+    set firstName(value: string) {
+        if (value.length > 3) {
+            this._firstName = value;
+        } else {
+            this._firstName = "";
+        }
+    }
+}
+
+// const personExercise = new PersonExercise();
+// console.log(personExercise.firstName);
+// personExercise.firstName = "Ma";
+// console.log(personExercise.firstName);
+// personExercise.firstName = "Albert";
+// console.log(personExercise.firstName);
+///////////////////
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+// Section 6 Namespaces and Modules
+////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
+///////////////////
+
+///////////////////
+// 
+//note:
 ///////////////////
 
 ///////////////////

@@ -438,3 +438,103 @@ var ITProject = /** @class */ (function (_super) {
     };
     return ITProject;
 }(Project));
+// let newProject = new ITProject();
+// console.log(newProject); // or
+// newProject.changeName("Awesome")
+// console.log(newProject);
+///////////////////
+///////////////////
+// Private Contructor
+//note:
+var OnlyOne = /** @class */ (function () {
+    function OnlyOne(name) {
+        this.name = name;
+    }
+    OnlyOne.getInstance = function () {
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The only one');
+        }
+        return OnlyOne.instance;
+    };
+    return OnlyOne;
+}());
+// let wrong = new OnlyOne('The only one'); //WRONG need be public 
+var right = OnlyOne.getInstance();
+///////////////////
+///////////////////
+// readonly properties
+//note: 2 ways to do it first in the getter/setter OR adding readonly
+right.name = 'Something else';
+///////////////////
+///////////////////
+// MODULE 5 Exercise
+//note:
+// Exercise 1 Class
+var Car = /** @class */ (function () {
+    function Car(name) {
+        this.accelaration = 0;
+        this.name = name;
+    }
+    Car.prototype.honk = function () {
+        console.log("Tooooooooot");
+    };
+    Car.prototype.accelerate = function (speed) {
+        this.accelaration = this.accelaration + speed;
+    };
+    return Car;
+}());
+//  const carModule5 = new Car("BMW");
+//  carModule5.honk();
+//  console.log(carModule5.accelaration);
+//  carModule5.accelerate(20);
+//  console.log(carModule5.accelaration);
+// Exercise 2
+var BaseObject = /** @class */ (function () {
+    function BaseObject() {
+        this.width = 0;
+        this.length = 0;
+    }
+    return BaseObject;
+}());
+var Rectangle = /** @class */ (function (_super) {
+    __extends(Rectangle, _super);
+    function Rectangle() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Rectangle.prototype.calcSize = function () {
+        return this.width * this.length;
+    };
+    return Rectangle;
+}(BaseObject));
+// const rectangle = new Rectangle();
+// rectangle.width = 5;
+// rectangle.length = 10;
+// console.log(rectangle.calcSize());
+// Exercise 3 Getter & Setters
+var PersonExercise = /** @class */ (function () {
+    function PersonExercise() {
+        this._firstName = "";
+    }
+    Object.defineProperty(PersonExercise.prototype, "firstName", {
+        get: function () {
+            return this._firstName;
+        },
+        set: function (value) {
+            if (value.length > 3) {
+                this._firstName = value;
+            }
+            else {
+                this._firstName = "";
+            }
+        },
+        enumerable: true,
+        configurable: true
+    });
+    return PersonExercise;
+}());
+var personExercise = new PersonExercise();
+console.log(personExercise.firstName);
+personExercise.firstName = "Ma";
+console.log(personExercise.firstName);
+personExercise.firstName = "Albert";
+console.log(personExercise.firstName);
