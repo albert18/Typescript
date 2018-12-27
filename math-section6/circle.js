@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PI = 3.14;
-function calculateCirumcumference(diameter) {
+function calculateCurcumference(diameter) {
     return diameter * exports.PI;
 }
