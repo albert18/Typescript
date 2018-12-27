@@ -532,9 +532,3 @@ var PersonExercise = /** @class */ (function () {
     });
     return PersonExercise;
 }());
-var personExercise = new PersonExercise();
-console.log(personExercise.firstName);
-personExercise.firstName = "Ma";
-console.log(personExercise.firstName);
-personExercise.firstName = "Albert";
-console.log(personExercise.firstName);
